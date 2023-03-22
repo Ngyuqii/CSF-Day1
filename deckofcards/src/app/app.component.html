@@ -1,0 +1,5 @@
+<h1>Deck of Card</h1>
+
+<app-hand *ngFor="let h of hands" [hand]="h"
+      (onRemoveCard)="removeCard($event)">
+</app-hand>
