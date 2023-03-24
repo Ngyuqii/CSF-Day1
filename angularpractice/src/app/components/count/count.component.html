@@ -1,0 +1,12 @@
+<h1>Let us count from 0 to 30.</h1>
+  <div>
+    <img src="/assets/numbers/number{{startNum}}.jpg" class="picture">
+  </div>
+  <div>
+    <span *ngIf ="startNum > 0">
+      <button type="button" (click)="updatePic(-1)">Prev</button>
+    </span>
+    <span *ngIf = "startNum < 30">
+      <button type="button" (click)="updatePic(1)">Next</button>
+    </span>
+  </div>

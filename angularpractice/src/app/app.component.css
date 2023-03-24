@@ -1,0 +1,14 @@
+h1 {
+  color: black;
+}
+
+h1:hover {
+  font-family: "Arial";
+  color: pink;
+}
+
+.box-it {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid black
+}

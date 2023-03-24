@@ -1,0 +1,13 @@
+<h1>{{ title }}</h1>
+
+<h3 [style.color]="textColour" (mouseenter)="cursorEntered()" (mouseleave)="cursorExit()">
+  This text is black, but hover over and it will turn red. 
+</h3>
+
+<div>
+  Hey! <input type="text" [placeholder]="moodText" [disabled]="disable" (input)="mood($event)">
+  <button type="button" (click)="toggleInput()" >{{buttonText}}</button>
+<div *ngIf="!!moodToday">
+  I am feeling {{moodToday}} today.</div>
+
+<app-count [startNum]= num (newNum)="showValue($event)"></app-count>

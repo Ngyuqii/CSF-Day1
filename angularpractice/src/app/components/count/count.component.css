@@ -1,0 +1,11 @@
+h1 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.picture {
+  height: 180px;
+  width: 150px;
+  border: 10px lightgray solid;
+  border-radius: 5px;
+}
