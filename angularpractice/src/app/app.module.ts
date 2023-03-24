@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { CountComponent } from './components/count/count.component';
+import { MoodComponent } from './components/mood/mood.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CountComponent
+    CountComponent,
+    MoodComponent
   ],
   imports: [
     BrowserModule

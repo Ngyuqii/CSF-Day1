@@ -4,10 +4,12 @@
   This text is black, but hover over and it will turn red. 
 </h3>
 
-<div>
-  Hey! <input type="text" [placeholder]="moodText" [disabled]="disable" (input)="mood($event)">
-  <button type="button" (click)="toggleInput()" >{{buttonText}}</button>
-<div *ngIf="!!moodToday">
-  I am feeling {{moodToday}} today.</div>
+<div class="box-it">
+  <app-mood [moodText] = moodText></app-mood>
+</div>
 
-<app-count [startNum]= num (newNum)="showValue($event)"></app-count>
+<div class class="box-it">
+  <app-count [startNum]= num (newNum)="showValue($event)"></app-count>
+</div>
+
+

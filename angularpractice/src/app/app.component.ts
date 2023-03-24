@@ -23,24 +23,10 @@ export class AppComponent {
     this.textColour = 'blue';
   }
 
-  //1.3 Toggle button to enable and disable input field and display input keys
-  moodText = "How do you feel today?";
-  moodToday = "";
-  buttonText = "Enter Mood";
-  disable = true;
+  //2. App-mood
+  moodText = "";
 
-  mood(event: any) {
-    console.info(event);
-    this.moodToday += event.data;
-  }
-
-  toggleInput() {
-    console.info("clicked");
-    this.disable = !this.disable;
-    this.disable == true? this.buttonText = "Edit Mood" : this.buttonText = "Ok";
-  }
-
-  //2. App-count
+  //3. App-count
   num = 0;
   showValue(event: number) {
     console.info('>>> increment value: ', event);

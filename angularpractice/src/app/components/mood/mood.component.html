@@ -1,0 +1,11 @@
+<div>
+    Hey. How do you feel today?
+</div>
+<div>
+    <input type="text" [value]="moodText"[disabled]="disable" (input)="mood($event)">
+    <button type="button" (click)="toggleInput()" >{{buttonText}}</button>
+</div>
+
+<div *ngIf="!!moodToday">
+    I am feeling {{moodToday}} today.
+</div>
