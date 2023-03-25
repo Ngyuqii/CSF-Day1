@@ -1,11 +1,26 @@
 <div>
-    Hey. How do you feel today?
+    My Mood:
 </div>
 <div>
-    <input type="text" [value]="moodText"[disabled]="disable" (input)="mood($event)">
+    <input type="text" [disabled]="disable" (input)="mood($event)">
     <button type="button" (click)="toggleInput()" >{{buttonText}}</button>
 </div>
-
 <div *ngIf="!!moodToday">
     I am feeling {{moodToday}} today.
 </div>
+<br>
+
+<div>
+    What are you in the mood for?
+</div>
+<div>
+    <input type="text" class="form-control" [(ngModel)]="moodActivity">
+    <button type="button" class="btn btn-primary" [disabled]="moodActivity === '' "
+    (click)="addActivity()" >Add</button>
+</div>
+<div *ngIf="moodActivities.length > 0; else noActivity">
+    I would like to have <span *ngFor="let activity of moodActivities">{{activity}}</span>.
+</div>
+<ng-template #noActivity>
+    <div>I have not decided.</div>
+</ng-template>

@@ -26,9 +26,16 @@ export class MoodComponent {
     this.disable == true? this.buttonText = "Edit Mood" : this.buttonText = "Ok";
     
     if (this.buttonText == "Ok") {
-      this.moodText = "";
       this.moodToday = "";
     }
+  }
+
+  moodActivity= "";
+  moodActivities: string[] = [];
+
+  addActivity(){
+    this.moodActivities.push(this.moodActivity);
+    this.moodActivity="";
   }
 
 }
